@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="..static/CSS/estilos.css" th:href="@{/CSS/estilos.css}" rel="stylesheet"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <title>Consultar Citas</title>
+</head>
+<body>
+    <header>
+    <img id="banner" src="/imagen/banner.jpg">
+    </header>
+    <br>
+    <aside>
+        <h1>Opciones</h1>
+        <h3>Registrar</h3>
+        <a href="/agendar"><img class="op" src="/Imagen/registro.png"> </a>
+        <h3>Consultar</h3>
+        <a href="/consultar"><img class="op" src="/Imagen/calendario.png"> </a>
+        <br>
+        <br>
+    </aside>
+    <section id="cal">
+        <div>
+            <h1>Calendario Citas:</h1> <div id="datepicker"></div>
+        </div>
+    </section>
+    <section id="citas">
+        <h1>Citas Progrmadas:</h1>
+        <ol>
+            <li
+                    th:each="fila: ${lista}"
+                    th:text="${fila}">
+            </li>
+        </ol>
+        <br>
+    </section>
+
+
+<script>
+    $( function() {
+        // An array of dates
+        var eventDates = {};
+        eventDates[ new Date( '08/07/2019' )] = new Date( '08/07/2019' );
+        eventDates[ new Date( '08/12/2016' )] = new Date( '08/12/2016' );
+        eventDates[ new Date( '08/18/2016' )] = new Date( '08/18/2016' );
+        eventDates[ new Date( '08/23/2016' )] = new Date( '08/23/2016' );
+
+        // datepicker
+        $('#datepicker').datepicker({
+            beforeShowDay: function( date ) {
+                var highlight = eventDates[date];
+                if( highlight ) {
+                    return [true, "event", 'Tooltip text'];
+                } else {
+                    return [true, '', ''];
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

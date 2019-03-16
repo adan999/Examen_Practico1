@@ -1,0 +1,76 @@
+body{
+    background-color: yellowgreen;
+    margin: 0px;
+    padding: 0px;
+}
+#banner {
+    width: 100%;
+    display: block;
+    height: 150px;
+    margin: auto;
+    border-bottom: 1px ridge white;
+}
+#datos{
+    background-color: ghostwhite;
+    text-align: center;
+    margin: 10px;
+    margin-left: 20%;
+    border: 5px ridge goldenrod;
+    box-shadow: 3px 5px 10px black;
+    color: darkred;
+}
+.per{
+    font-size: 15px;
+    font-family: "Arial Black";
+}
+.per input,textarea,select{
+    border: 1px ridge green;
+    font-family: "Segoe UI Black";
+    box-shadow: 1px 1px 1px black;
+}
+aside{
+    border-radius: 15px;
+    background-color: darkgreen;
+    color: white;
+    margin: 15px;
+    float: left;
+    text-align: center;
+    border: 2px ridge white;
+}
+.op{
+    height: 100px;
+    width: 50%;
+    border-radius: 25px;
+    border: 2px ridge yellowgreen;
+}
+.op:hover{
+    width: 60%;
+    height: 120px;
+}
+#boton{
+    background-color: goldenrod;
+    color: white;
+    width: 20%;
+    height: auto;
+    font-family: "Segoe UI Black";
+}
+.cuadro{
+    border-color: green;
+}
+.event a {
+    background-color: #5FBA7D !important;
+    color: #ffffff !important;
+}
+#cal{
+    float: right;
+    margin: 10px;
+}
+#citas{
+    background-color: ghostwhite;
+    margin: 15px;
+    margin-left: 20%;
+    margin-right: 23%;
+    border: 5px ridge goldenrod;
+    box-shadow: 3px 5px 10px black;
+    color: darkred;
+}
